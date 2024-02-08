@@ -2,7 +2,20 @@
 
 The purpose of this assignment was to practice implementing validation in a route for APIs.
 
-# Routes
+# Prerequisites
+```
+psql -c "CREATE DATABASE books;"
+psql -c "CREATE DATABASE books_test;"
+psql books < data.sqld
+psql books_test < data.sql
+
+npm install
+npm install jsonschema
+npm install jest
+npm install supertest
+```
+
+# Usage
 
 **GET /books :**
 
@@ -23,5 +36,3 @@ The purpose of this assignment was to practice implementing validation in a rout
 **DELETE /books/[isbn] :**
 
 - Deletes a book and responds with a message of “Book deleted”
-
-# Usage
