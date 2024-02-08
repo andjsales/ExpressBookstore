@@ -1,5 +1,5 @@
 const express = require("express");
-const expressError = (require('../helpers/expressError'));
+const expressError = (require('../expressError'));
 const router = new express.Router();
 
 const { validate } = require("jsonschema");
@@ -61,30 +61,6 @@ router.put("/:isbn", async function (req, res, next) {
   }
 });
 
-router.put("/:isbn", async function (req, res, next) {
-  try {
-    if ("isbn" in req.body) {
-      return next({
-        status: 400,
-        message: "Not allowed"
-      });
-    }
-    const validation = validate(req.body, bookUpdateSchema);
-    if (!validation.valid) {
-      return next({
-        status: 400,
-        errors: validation.errors.map(e => e.stack)
-      });
-    }
-    const book = await Book.update(req.params.isbn, req.body);
-    return res.json({ book });
-  }
-
-  catch (err) {
-    return next(err);
-  }
-});
-
 /** DELETE /[isbn]   => {message: "Book deleted"} */
 
 router.delete("/:isbn", async function (req, res, next) {
@@ -95,5 +71,6 @@ router.delete("/:isbn", async function (req, res, next) {
     return next(err);
   }
 });
+
 
 module.exports = router;
