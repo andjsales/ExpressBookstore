@@ -1,5 +1,7 @@
 # ExpressBookstore
 
+### Routes
+
 **GET /books :** Responds with a list of all the books
 
 **POST /books :** Creates a book and responds with the newly created book
