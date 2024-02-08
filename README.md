@@ -2,12 +2,22 @@
 
 ### Routes
 
-**GET /books :** Responds with a list of all the books
+**GET /books :**
 
-**POST /books :** Creates a book and responds with the newly created book
+- Responds with a list of all the books
 
-**GET /books/[isbn] :** Responds with a single book found by its **_isbn_**
+**POST /books :**
 
-**PUT /books/[isbn] :** Updates a book and responds with the updated book
+- Creates a book and responds with the newly created book
 
-**DELETE /books/[isbn] :** Deletes a book and responds with a message of “Book deleted”
+**GET /books/[isbn] :**
+
+- Responds with a single book found by its **_isbn_**
+
+**PUT /books/[isbn] :**
+
+- Updates a book and responds with the updated book
+
+**DELETE /books/[isbn] :**
+
+- Deletes a book and responds with a message of “Book deleted”
