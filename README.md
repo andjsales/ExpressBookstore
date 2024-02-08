@@ -1,6 +1,4 @@
-# ExpressBookstore
-
-### Routes
+# Routes
 
 **GET /books :**
 
@@ -21,3 +19,5 @@
 **DELETE /books/[isbn] :**
 
 - Deletes a book and responds with a message of “Book deleted”
+
+# Usage
