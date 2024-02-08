@@ -1,3 +1,7 @@
+# Purpose
+
+The purpose of this assignment was to practice implementing validation in a route for APIs.
+
 # Routes
 
 **GET /books :**
