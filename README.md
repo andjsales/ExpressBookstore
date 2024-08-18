@@ -20,7 +20,17 @@ Make sure to have these installed:
 - npm
 - PostgreSQL
 
-`npm install`
+```
+psql -c "CREATE DATABASE books;"
+psql -c "CREATE DATABASE books_test;"
+psql books < data.sqld
+psql books_test < data.sql
+
+npm install
+npm install jsonschema
+npm install jest
+npm install supertest
+```
 
 ## Configuration
 
